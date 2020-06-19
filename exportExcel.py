@@ -27,7 +27,7 @@ for item in table_list:
     for field in field_data_list:
         field_list.append(field[1])
     ws.append(field_list)
-    sql = 'select * from %s  where time >="13:30:00" and time<="19:30:00"' % (item)
+    sql = 'select * from %s' % (item)
     data_result_list = conn.execute(sql)
     for data in data_result_list:
         ws.append(list(data))
